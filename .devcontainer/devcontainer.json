@@ -1,0 +1,25 @@
+{
+    "name": "Bound VSCode Docker Project",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // VSCode container specific settings go here.
+            },
+            "extensions": [
+                "redhat.java",              // Language Support for Java™ by Red Hat
+                "vscjava.vscode-java-debug", // Debugger for Java
+                "vscjava.vscode-java-test",  // Java Test Runner
+                "vscjava.vscode-maven"       // Maven for Java (optional)
+                // VSCode container specific extensions go here.
+            ]
+        }
+    }
+}
